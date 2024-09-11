@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "c8e7501f-a19b-455b-ac8a-5670b1337ec0",
+		"name": "Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26757997",
+		"_collection_link": "https://lunar-meteor-659015.postman.co/workspace/New-Team-Workspace~3f8bad38-4d48-4395-93a6-93f1976ae251/collection/26757997-c8e7501f-a19b-455b-ac8a-5670b1337ec0?action=share&source=collection_link&creator=26757997"
+	},
+	"item": [
+		{
+			"name": "GetProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7070/lowstock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"lowstock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Subin\",\n    \"currentStock\":10,\n    \"category\":\"Books\",\n    \"minStock\":5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Vijay\",\n    \"currentStock\":10,\n    \"category\":\"Books\",\n    \"minStock\":5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7070/edit/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"edit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RestockSugg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7070/restocksug/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"restocksug",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
